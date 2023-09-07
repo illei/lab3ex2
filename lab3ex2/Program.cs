@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace lab3ex2
 {
@@ -7,22 +7,26 @@ namespace lab3ex2
         static void Main(string[] args)
         {
             int n = int.Parse(Console.ReadLine());
-            
+            /*Scrieti o functie care va determina daca un numar este sau nu numar prim. Apelati-o si afisati-i rezultatul*/
 
-            Console.WriteLine(factorial(n));
+            Console.WriteLine(isPrim(n));
         }
 
-        static int factorial(int x)
+        static bool isPrim(int x)
         {
-
-            int factorial = 1;
-
+            int a = 0;
             for (int i = 1; i <= x; i++)
             {
-                factorial = factorial * i;
+                if (x % i == 0) a++;
+                
             }
 
-            return factorial;
+            if (a == 2)
+            {
+                return true;
+
+            }
+            else return false;
 
         }
     }
